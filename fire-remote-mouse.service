@@ -1,0 +1,12 @@
+[Unit]
+Description=Fire TV Remote Controller for KDE Plasma Bigscreen
+After=graphical-session.target bluetooth.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 %h/.local/bin/remote_mouse.py
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=default.target
